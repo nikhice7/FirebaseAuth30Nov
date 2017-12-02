@@ -24,16 +24,16 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
     private Button buttonLogout;
 
     private DatabaseReference Mydatabase;
-    private DatabaseReference Tag_Mode;
-    private DatabaseReference Tag_Status;
+    //private DatabaseReference Tag_Mode;
+    //private DatabaseReference Tag_Status;
 
 
 
     private EditText editTextName, editTextAddress;
     private Button buttonsave;
 
-    private Button buttonTraining;
-    private Button buttonTesting;
+   /* private Button buttonTraining;
+    private Button buttonTesting;*/
 
 
 
@@ -75,8 +75,8 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         //displaying logged in user name
         textViewUserEmail.setText("Welcome"+user.getEmail());
 
-       Tag_Mode = Mydatabase.child( "Mode" );
-        Tag_Status = Mydatabase.child("Status" );
+      // Tag_Mode = Mydatabase.child( "Mode" );
+       // Tag_Status = Mydatabase.child("Status" );
 
 
 
@@ -114,7 +114,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
     @Override
     public void onClick(View view) {
 
-       if (view == buttonTraining){
+       /*if (view == buttonTraining){
 
             Tag_Mode.setValue( "Training" );
 
@@ -123,7 +123,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         if  (view == buttonTesting) {
 
             Tag_Mode.setValue( "Testing" );
-        }
+        }*/
 
         if (view ==buttonLogout){
             firebaseAuth.signOut();
